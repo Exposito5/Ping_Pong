@@ -18,7 +18,7 @@ public class Racquet1 {
     }
 
     public void move() {
-        if (y + ya > 0 && y + ya < game.getHeight() - 60) {
+        if (y + ya > 0 && y + ya < game.getHeight() - WIDTH) {
             y = y + ya;
         }
     }

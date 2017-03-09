@@ -6,9 +6,9 @@ import java.awt.Rectangle;
 public class Ball {
 
     private static final int DIAMETER = 30;
-    int x = 0;
+    int x = 250;
     int xa = 1;
-    int y = 0;
+    int y = 400;
     int ya = 1;
     private Game game;
 
@@ -30,12 +30,12 @@ public class Ball {
             ya = -1;
         }
         if (collision1()){
-            ya = -1;
-            y = game.rack1.getTopX() - DIAMETER;
+            xa = 1;
+            x = game.rack1.getTopX() - DIAMETER;
         }
         if (collision2()){
-            ya = -1;
-            y = game.rack2.getTopX() - DIAMETER;
+            xa = -1;
+            x = game.rack2.getTopX() - DIAMETER;
         }
 
         x = x + xa;

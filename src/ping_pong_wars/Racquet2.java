@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class Racquet2 {
 
-    private static final int X = 25;
+    private static final int X = 775;
     private static final int HEIGHT = 60;
     private static final int WIDTH = 10;
     int y = 0;
@@ -18,7 +18,7 @@ public class Racquet2 {
     }
     
     public void move() {
-        if (y + ya > 0 && y + ya < game.getHeight()-60)
+        if (y + ya > 0 && y + ya < game.getHeight()-WIDTH)
             y = y + ya;
     }
     
