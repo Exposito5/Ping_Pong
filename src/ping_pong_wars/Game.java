@@ -12,7 +12,8 @@ import javax.swing.JPanel;
 public class Game extends JPanel {
 
     Ball ball = new Ball(this);
-    Racquet1 rack = new Racquet1(this);
+    Racquet1 rack1 = new Racquet1(this);
+    Racquet2 rack2 = new Racquet2(this);
 
     public Game() {
         addKeyListener(new KeyListener() {
@@ -22,21 +23,23 @@ public class Game extends JPanel {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                rack.keyReleased(e);
+                rack1.keyReleased(e);
+                rack2.keyReleased(e);
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                rack.keyPressed(e);
+                rack1.keyPressed(e);
+                rack2.keyPressed(e);
             }
         });
         setFocusable(true);
-
     }
 
     private void move() {
         ball.move();
-        rack.move();
+        rack1.move();
+        rack2.move();
     }
 
     @Override
@@ -46,6 +49,8 @@ public class Game extends JPanel {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
         ball.paint(g2d);
+        rack1.paint(g2d);
+        rack2.paint(g2d);
     }
 
     public static void main(String[] args) throws InterruptedException {

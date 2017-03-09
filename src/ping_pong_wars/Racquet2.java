@@ -3,13 +3,13 @@ package ping_pong_wars;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
-public class Racquet1 {
+public class Racquet2 {
 
     int y = 0;
     int ya = 0;
     private Game game;
     
-    public Racquet1(Game game) {
+    public Racquet2(Game game) {
         this.game = game;
     }
     
@@ -19,7 +19,7 @@ public class Racquet1 {
     }
     
     public void paint (Graphics2D g) {
-        g.fillRect(25, y, 10, 60);
+        g.fillRect(750, y, 10, 60);
     }
     
     public void keyReleased(KeyEvent e) {
@@ -27,9 +27,9 @@ public class Racquet1 {
     }
     
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_W)
+        if (e.getKeyCode() == KeyEvent.VK_UP)
             ya = -1;
-        if (e.getKeyCode() == KeyEvent.VK_S)
+        if (e.getKeyCode() == KeyEvent.VK_DOWN)
             ya = 1;
     }
 }
