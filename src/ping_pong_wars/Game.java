@@ -6,6 +6,7 @@ import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
@@ -51,6 +52,11 @@ public class Game extends JPanel {
         ball.paint(g2d);
         rack1.paint(g2d);
         rack2.paint(g2d);
+    }
+    
+    public void gameOver () {
+        JOptionPane.showMessageDialog(this, "Game Over","Game Over",JOptionPane.YES_NO_OPTION);
+        System.exit(ABORT);
     }
 
     public static void main(String[] args) throws InterruptedException {
