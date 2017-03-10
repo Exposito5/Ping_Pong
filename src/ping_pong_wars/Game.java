@@ -1,5 +1,7 @@
 package ping_pong_wars;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -15,6 +17,11 @@ public class Game extends JPanel {
     Ball ball = new Ball(this);
     Racquet1 rack1 = new Racquet1(this);
     Racquet2 rack2 = new Racquet2(this);
+    int speed = 1;
+
+    private int getScore() {
+        return speed - 1;
+    }
 
     public Game() {
         addKeyListener(new KeyListener() {
@@ -52,10 +59,14 @@ public class Game extends JPanel {
         ball.paint(g2d);
         rack1.paint(g2d);
         rack2.paint(g2d);
+
+        g2d.setColor(Color.GRAY);
+        g2d.setFont(new Font("Kongtext", Font.BOLD, 20));
+        g2d.drawString(String.valueOf(getScore()), 390, 50);
     }
-    
-    public void gameOver () {
-        JOptionPane.showMessageDialog(this, "GAME OVER","GAME OVER",JOptionPane.YES_NO_OPTION);
+
+    public void gameOver() {
+        JOptionPane.showMessageDialog(this, "your score is: " + getScore(), "GAME OVER", JOptionPane.YES_NO_OPTION);
         System.exit(ABORT);
     }
 

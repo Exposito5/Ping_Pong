@@ -6,8 +6,8 @@ import java.awt.Rectangle;
 public class Ball {
 
     private static final int DIAMETER = 30;
-    int x = 400;
-    int xa = 3;
+    int x = 100;
+    int xa = 1;
     int y = 200;
     int ya = 1;
     private Game game;
@@ -27,21 +27,23 @@ public class Ball {
         }
         //choque con la pared de abajo
         if (y + ya < 0) {
-            ya = 1;
+            ya = game.speed;
         }
         //choque con la pared de arriba
         if (y + ya > game.getHeight() - DIAMETER) {
-            ya = -1;
+            ya = -game.speed;
         }
         //colision raqueta de la izquierda
         if (collision1 ()){
-            xa = 3;
+            xa = game.speed;
             x = game.rack1.getTopX() + DIAMETER;
+            game.speed++;
         }
         //colison de la raqueta derecha
         if (collision2()){
-            xa = -3;
+            xa = -game.speed;
             x = game.rack2.getTopX() - DIAMETER;
+            game.speed++;
         }
         //movimiento continuo
         x = x + xa;
