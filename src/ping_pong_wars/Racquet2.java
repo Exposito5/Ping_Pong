@@ -6,10 +6,10 @@ import java.awt.event.KeyEvent;
 
 public class Racquet2 {
 
-    private static final int X = 775;
+    private static final int X = 760;
     private static final int HEIGHT = 60;
-    private static final int WIDTH = 10;
-    int y = 0;
+    private static final int WIDTH = 20;
+    int y = 200;
     int ya = 0;
     private Game game;
     
@@ -23,7 +23,7 @@ public class Racquet2 {
     }
     
     public void paint (Graphics2D g) {
-        g.fillRect(750, y, 10, 60);
+        g.fillRect(X, y, WIDTH, HEIGHT);
     }
     
     public void keyReleased(KeyEvent e) {

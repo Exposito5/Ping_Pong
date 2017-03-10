@@ -6,9 +6,9 @@ import java.awt.Rectangle;
 public class Ball {
 
     private static final int DIAMETER = 30;
-    int x = 250;
+    int x = 400;
     int xa = 1;
-    int y = 400;
+    int y = 200;
     int ya = 1;
     private Game game;
 

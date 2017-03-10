@@ -6,10 +6,10 @@ import java.awt.event.KeyEvent;
 
 public class Racquet1 {
 
-    private static final int X = 25;
+    private static final int X = 5;
     private static final int HEIGHT = 60;
-    private static final int WIDTH = 10;
-    int y = 0;
+    private static final int WIDTH = 20;
+    int y = 200;
     int ya = 0;
     private Game game;
 
