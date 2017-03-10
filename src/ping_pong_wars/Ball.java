@@ -7,7 +7,7 @@ public class Ball {
 
     private static final int DIAMETER = 30;
     int x = 400;
-    int xa = 1;
+    int xa = 3;
     int y = 200;
     int ya = 1;
     private Game game;
@@ -17,27 +17,33 @@ public class Ball {
     }
 
     void move() {
+        //game over de la pared de la izquierda
         if (x + xa < 0) {
-            xa = 1;
+            game.gameOver();
         }
+        //game over de la pared de la derecha
         if (x + xa > game.getWidth() - DIAMETER) {
             game.gameOver();
         }
+        //choque con la pared de abajo
         if (y + ya < 0) {
             ya = 1;
         }
+        //choque con la pared de arriba
         if (y + ya > game.getHeight() - DIAMETER) {
             ya = -1;
         }
-        if (collision1()){
-            xa = 1;
-            x = game.rack1.getTopX() - DIAMETER;
+        //colision raqueta de la izquierda
+        if (collision1 ()){
+            xa = 3;
+            x = game.rack1.getTopX() + DIAMETER;
         }
+        //colison de la raqueta derecha
         if (collision2()){
-            xa = -1;
+            xa = -3;
             x = game.rack2.getTopX() - DIAMETER;
         }
-
+        //movimiento continuo
         x = x + xa;
         y = y + ya;
     }

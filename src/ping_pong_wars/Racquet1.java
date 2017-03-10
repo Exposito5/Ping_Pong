@@ -6,8 +6,8 @@ import java.awt.event.KeyEvent;
 
 public class Racquet1 {
 
-    private static final int X = 5;
-    private static final int HEIGHT = 60;
+    private static final int X = 20;
+    private static final int HEIGHT = 80;
     private static final int WIDTH = 20;
     int y = 200;
     int ya = 0;
@@ -33,10 +33,10 @@ public class Racquet1 {
 
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_W) {
-            ya = -1;
+            ya = -3;
         }
         if (e.getKeyCode() == KeyEvent.VK_S) {
-            ya = 1;
+            ya = 3;
         }
     }
 
@@ -45,6 +45,6 @@ public class Racquet1 {
     }
 
     public int getTopX() {
-        return X - WIDTH;
+        return X + WIDTH;
     }
 }

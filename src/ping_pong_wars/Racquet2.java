@@ -6,8 +6,8 @@ import java.awt.event.KeyEvent;
 
 public class Racquet2 {
 
-    private static final int X = 760;
-    private static final int HEIGHT = 60;
+    private static final int X = 745;
+    private static final int HEIGHT = 80;
     private static final int WIDTH = 20;
     int y = 200;
     int ya = 0;
@@ -32,9 +32,9 @@ public class Racquet2 {
     
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP)
-            ya = -1;
+            ya = -3;
         if (e.getKeyCode() == KeyEvent.VK_DOWN)
-            ya = 1;
+            ya = 3;
     }
     
     public Rectangle getBounds() {

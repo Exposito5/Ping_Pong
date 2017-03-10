@@ -55,7 +55,7 @@ public class Game extends JPanel {
     }
     
     public void gameOver () {
-        JOptionPane.showMessageDialog(this, "Game Over","Game Over",JOptionPane.YES_NO_OPTION);
+        JOptionPane.showMessageDialog(this, "GAME OVER","GAME OVER",JOptionPane.YES_NO_OPTION);
         System.exit(ABORT);
     }
 
